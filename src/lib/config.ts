@@ -1,9 +1,9 @@
 'use client';
 import { http, createConfig,  createStorage, cookieStorage } from 'wagmi'
 import { bsc, bscTestnet } from 'wagmi/chains'
-import { injected, metaMask, walletConnect } from 'wagmi/connectors'
+import { metaMask } from 'wagmi/connectors'
 
-const projectId = ''
+// const projectId = ''
 
 export const config = createConfig({
   chains: [bsc, bscTestnet],
