@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html className={inter.className} lang="en">
       <body className="relative overflow-hidden">
-      <Providers cookie={cookie}>
+      <Providers>
           <Navbar />
             <main>
             {children}
