@@ -1,8 +1,14 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Providers from "@/components/providers";
+
+import { cookieToInitialState } from 'wagmi'
+
+import { config } from '@/config'
+import Web3ModalProvider from '@/context'
+
+// import Providers from "@/components/providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -20,17 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
   
 }>) {
-  const cookie = headers().get("cookie");
+  const initialState = cookieToInitialState(config, headers().get('cookie'))
   return (
     <html className={inter.className} lang="en">
       <body className="relative overflow-hidden">
-      <Providers>
+      <Web3ModalProvider initialState={initialState}>
           <Navbar />
             <main>
             {children}
             </main>
           <Footer />
-        </Providers>
+          </Web3ModalProvider>
       </body>
     </html>
   );
