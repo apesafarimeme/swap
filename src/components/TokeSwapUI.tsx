@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import styles from "./TokenSwapUI.module.css";
+import V1Balance from "./V1Balance";
 
 const TokenSwapUI: FunctionComponent = () => {
   return (
@@ -43,7 +44,7 @@ const TokenSwapUI: FunctionComponent = () => {
                 <div className={styles.max}>
                   <div className={styles.balance}>Balance:</div>
                 </div>
-                <div className={styles.eth1}>2,000,000.00 APESAFARI_v0</div>
+                <div className={styles.eth1}><V1Balance /></div>
                 {/* <div className={styles.max1}>(Max)</div> */}
               </div>
               <div className={styles.div1}>≈ $ 30,000.00</div>
@@ -87,7 +88,7 @@ const TokenSwapUI: FunctionComponent = () => {
         </div>
         <div className={styles.footerLeftBalance} />
         <div className={styles.eos00003064ethWrapper}>
-          <div className={styles.eos00003064eth}>1 ApeSafariV0 = 1 ApeSafariV1</div>
+          <div className={styles.eos00003064eth}>1 ApeSafari_v0 -&gt; 1 ApeSafari_v1</div>
         </div>
         <button className={styles.btn}>
           <div className={styles.swap1}>Swap</div>

@@ -31,12 +31,12 @@ export default function RootLayout({
     <html className={inter.className} lang="en">
       <body className="relative overflow-hidden">
       <Web3ModalProvider initialState={initialState}>
-          <Navbar />
-            <main>
+        <Navbar />
+          <main>
             {children}
-            </main>
-          <Footer />
-          </Web3ModalProvider>
+          </main>
+        <Footer />
+      </Web3ModalProvider>
       </body>
     </html>
   );
